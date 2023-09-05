@@ -11,6 +11,9 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     private let languages = ["Deutschland", "Österreich", "Schweiz"]
     
+    
+    private let horizontalPadding = 10.0
+    
     private let urLogo: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "ur_logo"))
         return imageView
@@ -46,11 +49,11 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return textField
     }()
     
-    private let repeatPasswordTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Repeat Password"
-        textField.borderStyle = .roundedRect
-        return textField
+    private let forgotPasswordButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Forgot password?", for: .normal)
+        button.tintColor = .systemBlue
+        return button
     }()
     
     private let languagePicker: UIPickerView = {
@@ -89,9 +92,9 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         view.addSubview(registerLabel)
         view.addSubview(firstnameTextField)
         view.addSubview(emailTextField)
-        view.addSubview(repeatPasswordTextField)
         view.addSubview(passwordTextField)
         view.addSubview(languagePicker)
+        view.addSubview(forgotPasswordButton)
         view.addSubview(registerButton)
         view.addSubview(loginButton)
         view.addSubview(loginText)
@@ -103,8 +106,8 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         urLogo.translatesAutoresizingMaskIntoConstraints = false
         registerLabel.translatesAutoresizingMaskIntoConstraints = false
         firstnameTextField.translatesAutoresizingMaskIntoConstraints = false
+        forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
         emailTextField.translatesAutoresizingMaskIntoConstraints = false
-        repeatPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         languagePicker.translatesAutoresizingMaskIntoConstraints = false
@@ -118,42 +121,40 @@ class RegisterViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             urLogo.heightAnchor.constraint(equalToConstant: 175),
             
             registerLabel.topAnchor.constraint(equalTo: urLogo.bottomAnchor, constant: 50),
-            registerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
+            registerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             
         
             firstnameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             firstnameTextField.topAnchor.constraint(equalTo: urLogo.bottomAnchor, constant: 120),
-            firstnameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            firstnameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            firstnameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalPadding),
+            firstnameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
             
             emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emailTextField.topAnchor.constraint(equalTo: firstnameTextField.bottomAnchor, constant: 25),
-            emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
-            
-            repeatPasswordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            repeatPasswordTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 25),
-            repeatPasswordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            repeatPasswordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalPadding),
+            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
 
             passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 25),
-            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalPadding),
+            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
+            
+            forgotPasswordButton.topAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 5),
+            forgotPasswordButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
             
             languagePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            languagePicker.topAnchor.constraint(equalTo: repeatPasswordTextField.bottomAnchor, constant: 15),
-            languagePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            languagePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            languagePicker.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 15),
+            languagePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalPadding),
+            languagePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
             languagePicker.heightAnchor.constraint(equalToConstant: 70),
 
             registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             registerButton.topAnchor.constraint(equalTo: languagePicker.bottomAnchor, constant: 15),
-            registerButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            registerButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            registerButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalPadding),
+            registerButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
             
             loginButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            loginButton.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -70),
+            loginButton.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -horizontalPadding),
             
             loginText.centerYAnchor.constraint(equalTo: loginButton.centerYAnchor),
             loginText.trailingAnchor.constraint(equalTo: loginButton.leadingAnchor, constant: -10),

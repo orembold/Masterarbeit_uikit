@@ -9,11 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let horizontalPadding = 10.0
+    
     private let urLogo: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "ur_logo"))
         return imageView
     }()
-    
     
     private let loginLabel: UILabel = {
         let label = UILabel()
@@ -97,29 +98,29 @@ class ViewController: UIViewController {
             urLogo.heightAnchor.constraint(equalToConstant: 175),
             
             loginLabel.topAnchor.constraint(equalTo: urLogo.bottomAnchor, constant: 50),
-            loginLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
+            loginLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             
             
             emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emailTextField.topAnchor.constraint(equalTo: urLogo.bottomAnchor, constant: 120),
-            emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            emailTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalPadding),
+            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
             
             passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 25),
-            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalPadding),
+            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
     
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 25),
-            loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: horizontalPadding),
+            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
             
             forgotPasswordButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 5),
-            forgotPasswordButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
+            forgotPasswordButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -horizontalPadding),
             
             registerButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            registerButton.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -70),
+            registerButton.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -horizontalPadding),
             
             registerText.centerYAnchor.constraint(equalTo:  registerButton.centerYAnchor),
             registerText.trailingAnchor.constraint(equalTo: registerButton.leadingAnchor, constant: -10),
