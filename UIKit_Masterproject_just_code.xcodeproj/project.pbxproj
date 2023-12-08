@@ -7,24 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55A548352AA3773D001C027D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A548342AA3773D001C027D /* RegisterViewController.swift */; };
+		55555C052B237A9B00AB0A79 /* FloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55555C042B237A9B00AB0A79 /* FloatingActionButton.swift */; };
+		55555C082B237ACA00AB0A79 /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55555C062B237ACA00AB0A79 /* StudentModel.swift */; };
+		55555C092B237ACA00AB0A79 /* ExampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55555C072B237ACA00AB0A79 /* ExampleData.swift */; };
+		55555C0B2B237B8F00AB0A79 /* StudentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55555C0A2B237B8F00AB0A79 /* StudentDetailsViewController.swift */; };
+		55555C0D2B237DE000AB0A79 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55555C0C2B237DE000AB0A79 /* StudentCell.swift */; };
+		55A548352AA3773D001C027D /* AddNewStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A548342AA3773D001C027D /* AddNewStudentViewController.swift */; };
 		55D19B1C2A94FCC2006BCFCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D19B1B2A94FCC2006BCFCD /* AppDelegate.swift */; };
 		55D19B1E2A94FCC2006BCFCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D19B1D2A94FCC2006BCFCD /* SceneDelegate.swift */; };
-		55D19B202A94FCC2006BCFCD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D19B1F2A94FCC2006BCFCD /* LoginViewController.swift */; };
-		55D19B232A94FCC2006BCFCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D19B212A94FCC2006BCFCD /* Main.storyboard */; };
+		55D19B202A94FCC2006BCFCD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D19B1F2A94FCC2006BCFCD /* HomeViewController.swift */; };
 		55D19B252A94FCC4006BCFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D19B242A94FCC4006BCFCD /* Assets.xcassets */; };
-		55D19B282A94FCC4006BCFCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D19B262A94FCC4006BCFCD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		55A548342AA3773D001C027D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		55555C042B237A9B00AB0A79 /* FloatingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButton.swift; sourceTree = "<group>"; };
+		55555C062B237ACA00AB0A79 /* StudentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
+		55555C072B237ACA00AB0A79 /* ExampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleData.swift; sourceTree = "<group>"; };
+		55555C0A2B237B8F00AB0A79 /* StudentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsViewController.swift; sourceTree = "<group>"; };
+		55555C0C2B237DE000AB0A79 /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
+		55A548342AA3773D001C027D /* AddNewStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewStudentViewController.swift; sourceTree = "<group>"; };
 		55D19B182A94FCC2006BCFCD /* UIKit_Masterproject_just_code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKit_Masterproject_just_code.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D19B1B2A94FCC2006BCFCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55D19B1D2A94FCC2006BCFCD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55D19B1F2A94FCC2006BCFCD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		55D19B222A94FCC2006BCFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55D19B1F2A94FCC2006BCFCD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		55D19B242A94FCC4006BCFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		55D19B272A94FCC4006BCFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55D19B292A94FCC4006BCFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55555C022B237A4500AB0A79 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55555C042B237A9B00AB0A79 /* FloatingActionButton.swift */,
+				55555C0C2B237DE000AB0A79 /* StudentCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		55555C032B237A5000AB0A79 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				55D19B1F2A94FCC2006BCFCD /* HomeViewController.swift */,
+				55A548342AA3773D001C027D /* AddNewStudentViewController.swift */,
+				55555C0A2B237B8F00AB0A79 /* StudentDetailsViewController.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		55D19B0F2A94FCC2006BCFCD = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +83,13 @@
 		55D19B1A2A94FCC2006BCFCD /* UIKit_Masterproject_just_code */ = {
 			isa = PBXGroup;
 			children = (
+				55555C022B237A4500AB0A79 /* Views */,
+				55555C032B237A5000AB0A79 /* Pages */,
 				55D19B1B2A94FCC2006BCFCD /* AppDelegate.swift */,
+				55555C072B237ACA00AB0A79 /* ExampleData.swift */,
+				55555C062B237ACA00AB0A79 /* StudentModel.swift */,
 				55D19B1D2A94FCC2006BCFCD /* SceneDelegate.swift */,
-				55D19B1F2A94FCC2006BCFCD /* LoginViewController.swift */,
-				55A548342AA3773D001C027D /* RegisterViewController.swift */,
-				55D19B212A94FCC2006BCFCD /* Main.storyboard */,
 				55D19B242A94FCC4006BCFCD /* Assets.xcassets */,
-				55D19B262A94FCC4006BCFCD /* LaunchScreen.storyboard */,
 				55D19B292A94FCC4006BCFCD /* Info.plist */,
 			);
 			path = UIKit_Masterproject_just_code;
@@ -128,9 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55D19B282A94FCC4006BCFCD /* LaunchScreen.storyboard in Resources */,
 				55D19B252A94FCC4006BCFCD /* Assets.xcassets in Resources */,
-				55D19B232A94FCC2006BCFCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,33 +164,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55A548352AA3773D001C027D /* RegisterViewController.swift in Sources */,
-				55D19B202A94FCC2006BCFCD /* LoginViewController.swift in Sources */,
+				55555C092B237ACA00AB0A79 /* ExampleData.swift in Sources */,
+				55A548352AA3773D001C027D /* AddNewStudentViewController.swift in Sources */,
+				55555C082B237ACA00AB0A79 /* StudentModel.swift in Sources */,
+				55555C0D2B237DE000AB0A79 /* StudentCell.swift in Sources */,
+				55D19B202A94FCC2006BCFCD /* HomeViewController.swift in Sources */,
+				55555C052B237A9B00AB0A79 /* FloatingActionButton.swift in Sources */,
+				55555C0B2B237B8F00AB0A79 /* StudentDetailsViewController.swift in Sources */,
 				55D19B1C2A94FCC2006BCFCD /* AppDelegate.swift in Sources */,
 				55D19B1E2A94FCC2006BCFCD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		55D19B212A94FCC2006BCFCD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55D19B222A94FCC2006BCFCD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		55D19B262A94FCC4006BCFCD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55D19B272A94FCC4006BCFCD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		55D19B2A2A94FCC4006BCFCD /* Debug */ = {
@@ -296,7 +305,6 @@
 				INFOPLIST_FILE = UIKit_Masterproject_just_code/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +332,6 @@
 				INFOPLIST_FILE = UIKit_Masterproject_just_code/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
