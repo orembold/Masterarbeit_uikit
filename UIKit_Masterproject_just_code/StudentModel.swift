@@ -21,6 +21,19 @@ struct StudentModel: Decodable, Identifiable, Hashable {
         return "\(firstname) \(lastname)"
     }
     
+    init(studentNumber: Int, courseOfStudy: String) {
+        let students = ExampleData.getStudentsData()
+        let foundStudent = students[Int.random(in: 0..<students.count)]
+        self.id = UUID()
+        self.firstname = foundStudent.firstname
+        self.lastname = foundStudent.lastname + " (new student)"
+        self.universityMail = foundStudent.universityMail
+        self.age = foundStudent.age
+        self.semesterCount = foundStudent.semesterCount
+        self.studentNumber = studentNumber
+        self.courseOfStudy = courseOfStudy
+    }
+    
     
     private enum CodingKeys: String, CodingKey {
         case firstname

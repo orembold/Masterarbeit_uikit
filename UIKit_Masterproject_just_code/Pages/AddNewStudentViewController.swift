@@ -7,9 +7,12 @@
 
 import UIKit
 
-class AddNewStudentViewController: UIViewController {
+class AddNewStudentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     
     var onAddStudent: ((StudentModel) -> Void)?
+    
+    var availableCoursesOfStudy = ["Physics", "Mathematics", "Computer science", "English"]
     
     private lazy var urLogo: UIImageView = {
             let imageView = UIImageView(image: UIImage(named: "ur_logo")) // Replace "ur_logo" with the actual image name
@@ -26,6 +29,13 @@ class AddNewStudentViewController: UIViewController {
         return label
     }()
     
+    
+    private lazy var pickerView: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.translatesAutoresizingMaskIntoConstraints = false
+        return pickerView
+    }()
+    
     private lazy var backButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -40,6 +50,9 @@ class AddNewStudentViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
+        
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
 
         view.backgroundColor = .white
 
@@ -50,6 +63,7 @@ class AddNewStudentViewController: UIViewController {
         
         view.addSubview(urLogo)
         view.addSubview(titleLabel)
+        view.addSubview(pickerView)
         view.addSubview(backButton)
         
         NSLayoutConstraint.activate([
@@ -62,21 +76,36 @@ class AddNewStudentViewController: UIViewController {
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
             
+            pickerView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40),
+            pickerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            pickerView.heightAnchor.constraint(equalToConstant: 80),
             
+            backButton.topAnchor.constraint(equalTo: pickerView.bottomAnchor, constant: 20),
             backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            backButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
             
         ])
     }
     
     @objc private func saveButtonTapped() {
-        let newStudent = StudentModel(firstname: "", lastname: "", universityMail: "", age: 0, semesterCount: 0, studentNumber: 0, courseOfStudy: "")
+        let newStudent = StudentModel(studentNumber: Int("placeholder") ?? 0, courseOfStudy: availableCoursesOfStudy[pickerView.selectedRow(inComponent: 0)])
         onAddStudent?(newStudent)
+        navigationController?.popViewController(animated: true)
     }
     
     @objc private func backButtonTapped() {
-        let newStudent = StudentModel(firstname: "", lastname: "", universityMail: "", age: 0, semesterCount: 0, studentNumber: 0, courseOfStudy: "")
-        onAddStudent?(newStudent) 
         navigationController?.popViewController(animated: true)
+    }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return availableCoursesOfStudy.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return availableCoursesOfStudy[row]
     }
 }
