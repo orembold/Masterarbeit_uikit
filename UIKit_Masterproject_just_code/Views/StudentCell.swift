@@ -66,7 +66,7 @@ class StudentCell: UITableViewCell {
     func configure(with student: StudentModel) {
         profileImageView.image = UIImage(systemName: "person.circle.fill")
         nameLabel.text = student.fullName
-        courseLabel.text = "Course of study: \(student.courseOfStudy)"
+        courseLabel.text = student.courseOfStudy
     }
 }
 
