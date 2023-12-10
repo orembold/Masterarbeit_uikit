@@ -107,19 +107,19 @@ class StudentDetailsViewController: UIViewController {
             ageLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             ageLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
 
-            universityMailLabel.topAnchor.constraint(equalTo: ageLabel.bottomAnchor, constant: 3),
+            universityMailLabel.topAnchor.constraint(equalTo: ageLabel.bottomAnchor, constant: 8),
             universityMailLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             universityMailLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
 
-            semesterCountLabel.topAnchor.constraint(equalTo: universityMailLabel.bottomAnchor, constant: 3),
+            semesterCountLabel.topAnchor.constraint(equalTo: universityMailLabel.bottomAnchor, constant: 8),
             semesterCountLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             semesterCountLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
 
-            courseOfStudyLabel.topAnchor.constraint(equalTo: semesterCountLabel.bottomAnchor, constant: 3),
+            courseOfStudyLabel.topAnchor.constraint(equalTo: semesterCountLabel.bottomAnchor, constant: 8),
             courseOfStudyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             courseOfStudyLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
 
-            studentNumberLabel.topAnchor.constraint(equalTo: courseOfStudyLabel.bottomAnchor, constant: 3),
+            studentNumberLabel.topAnchor.constraint(equalTo: courseOfStudyLabel.bottomAnchor, constant: 8),
             studentNumberLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             studentNumberLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
         ])
